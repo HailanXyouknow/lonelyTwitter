@@ -10,7 +10,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Date;
 
 import android.app.Activity;
 import android.content.Context;
@@ -30,7 +29,7 @@ public class LonelyTwitterActivity extends Activity {
 	private static final String FILENAME = "newfile.sav";
 	private EditText bodyText;
 	private ListView oldTweetsList;
-	
+
 	private ArrayList<Tweet> tweetlist;
 	private ArrayAdapter<Tweet> adapter;
 	/** Called when the activity is first created. */
@@ -41,7 +40,15 @@ public class LonelyTwitterActivity extends Activity {
 
 		bodyText = (EditText) findViewById(R.id.body);
 		Button saveButton = (Button) findViewById(R.id.save);
+		Button clearButton = (Button) findViewById(R.id.clear);
 		oldTweetsList = (ListView) findViewById(R.id.oldTweetsList);
+
+		clearButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View view) {
+				tweetlist.clear();
+				adapter.notifyDataSetChanged();
+			}
+		});
 
 		saveButton.setOnClickListener(new View.OnClickListener() {
 
