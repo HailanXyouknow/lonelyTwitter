@@ -1,3 +1,9 @@
+
+/*
+ *
+ * Copyright (c) 2018. Team X. Modification allowed
+ */
+
 package ca.ualberta.cs.lonelytwitter;
 
 import java.io.BufferedReader;
