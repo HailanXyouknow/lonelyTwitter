@@ -69,7 +69,7 @@ public class LonelyTwitterActivity extends Activity {
 
 		oldTweetsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-				
+
 			}
 		});
 	}
